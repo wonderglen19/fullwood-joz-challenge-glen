@@ -1,5 +1,1 @@
-{
-  "dependencies": {
-    "use-debounce": "^10.0.0"
-  }
-}
+{"scripts":{"build":"next build","dev":"next dev","start":"next start","seed":"node -r dotenv/config ./nextjs-dashboard/scripts/seed.js"},"dependencies":{"@vercel/postgres":"^0.5.1","dotenv":"^16.3.1","next":"^14.0.5-canary.52","use-debounce":"^10.0.0"}}

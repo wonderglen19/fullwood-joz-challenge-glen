@@ -39,13 +39,13 @@ export default async function RouteSchedulesTable({query}:{query: string}) {
                       {routeS.route_id}
                     </p>
                     <p className="text-xl font-medium">
-                      {routeS.time}
+                      {routeS.time.toString()}
                     </p>
                     <p className="text-xl font-medium">
-                      {routeS.p_offset}
+                      {routeS.p_offset.toString()}
                     </p>
                     <p className="text-xl font-medium">
-                      {formatDateToLocal(routeS.date_changed)}
+                      {routeS.date_changed.toString()}
                     </p>
                     <p className="text-xl font-medium">
                       {routeS.changed_by}
@@ -114,13 +114,13 @@ export default async function RouteSchedulesTable({query}:{query: string}) {
                     {routeS.route_id}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {routeS.time}
+                    {routeS.time.toString()}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {routeS.p_offset}
+                    {routeS.p_offset.toString()}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
-                    {formatDateToLocal(routeS.date_changed.toString())}
+                    {routeS.date_changed.toString()}
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
                     {routeS.changed_by}

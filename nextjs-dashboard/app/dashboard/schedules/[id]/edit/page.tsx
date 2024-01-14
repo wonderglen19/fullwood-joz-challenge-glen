@@ -1,4 +1,4 @@
-import Form from '@/app/ui/routes/edit-form';
+import Form from '@/app/ui/schedules/edit-form';
 import Breadcrumbs from '@/app/ui/invoices/breadcrumbs';
 import { fetchRouteSchedules, fetchRouteById } from '@/app/lib/data';
 import { notFound } from 'next/navigation';

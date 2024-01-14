@@ -13,7 +13,7 @@ export default async function RoutesTable({query}:{query: string}) {
     <h1 className={`${lusitana.className} mb-8 text-xl md:text-2xl`}>
       Routes
     </h1>
-    <Search placeholder="Search customers..." />
+    <Search />
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
         <div className="rounded-lg bg-gray-50 p-2 md:pt-0">

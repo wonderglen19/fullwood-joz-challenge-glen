@@ -1,6 +1,6 @@
 'use client';
 
-import { CustomerField, InvoiceForm, MachineForm, RouteForm, RouteSchedulesField, RoutesField } from '@/app/lib/definitions';
+import { CustomerField, InvoiceForm, RouteForm, RouteSchedulesField } from '@/app/lib/definitions';
 import {
   CheckIcon,
   ClockIcon,
@@ -11,36 +11,36 @@ import Link from 'next/link';
 import { Button } from '@/app/ui/button';
 import { updateInvoice, updateRoute, updateRouteSchedules } from '@/app/lib/actions';
 
-export default function EditRouteForm({
-  machine,
-  routes,
+export default function EditRouteSchedulesForm({
+  route,
+  routeSchedules,
 }: {
-  machine: MachineForm;
-  routes: RoutesField[];
+  route: RouteForm;
+  routeSchedules: RouteSchedulesField[];
 }) {
 
-  const updateRouteWithId = updateRoute.bind(null, machine.route_id);
+  const updateRouteSchedulesWithId = updateRouteSchedules.bind(null, route.route_id);
   return (
-    <form action={updateRouteWithId}>
+    <form action={updateRouteSchedulesWithId}>
       <div className="rounded-md bg-gray-50 p-4 md:p-6">
         {/* Route Name */}
         <div className="mb-4">
           <label htmlFor="customer" className="mb-2 block text-sm font-medium">
-            Choose Route
+            Choose Route Schedule
           </label>
           <div className="relative">
             <select
               id="customer"
               name="customerId"
               className="peer block w-full cursor-pointer rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
-              defaultValue={machine.route_id}
+              defaultValue={route.route_id}
             >
               <option value="" disabled>
                 Select a machine
               </option>
-              {routes.map((route) => (
-                <option key={route.route_id} value={route.route_id}>
-                  {route.route_id}
+              {routeSchedules.map((routeSc) => (
+                <option key={route.route_id} value={routeSc.route_id}>
+                  {routeSc.machine_id}
                 </option>
               ))}
             </select>

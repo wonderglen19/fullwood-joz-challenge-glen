@@ -30,9 +30,6 @@ export default async function RouteSchedulesTable({query}:{query: string}) {
                     </div>
                     <div className="mb-2 flex items-center">
                       <p>{routeS.machine_id}</p>
-                    </div>
-                    <p className="text-sm text-gray-500">{formatDateToLocal(route.date_created.toString())}</p>
-                  </div>
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
